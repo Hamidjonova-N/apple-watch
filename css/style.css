@@ -159,8 +159,8 @@ a {
   border-bottom: 2px solid #dddddd;
   background-image: url(/img/intro-bg.png);
   background-repeat: no-repeat;
-  background-position: left calc(50% + 412px) bottom;
-  background-size: contain;
+  background-position: left calc(50% + 550px) bottom;
+  background-size: 587px 565px;
   padding-top: 140px;
   padding-bottom: 185px;
   margin-bottom: 68px;
