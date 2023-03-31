@@ -2,6 +2,7 @@
 
 :root {
   --accent-color: #ea625c;
+  --primary-dark: #c9514c;
   --text-font-family: "Roboto", "Arial", sans-serif;
 }
 
@@ -39,7 +40,7 @@ a {
 }
 
 *:focus {
-  outline: 2px dotted #ea625c;
+  outline: 2px dotted var(--accent-color);
   outline-offset: 3px;
 }
 
@@ -58,12 +59,17 @@ a {
 .site-header {
   width: 100%;
   padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.site-header-top {
+.site-header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 .site-header-logo-link {
@@ -142,4 +148,157 @@ a {
   font-size: 15px;
   line-height: 150%;
   color: #666666;
+}
+
+/* HERO */
+
+.hero {
+  /* height: 100vh; */
+  /* max-height: 567px; */
+  width: 100%;
+  border-bottom: 2px solid #dddddd;
+  background-image: url(/img/intro-bg.png);
+  background-repeat: no-repeat;
+  background-position: left calc(50% + 412px) bottom;
+  background-size: contain;
+  padding-top: 140px;
+  padding-bottom: 185px;
+  margin-bottom: 68px;
+}
+
+.repeated-content-wrapper {
+  width: 100%;
+  max-width: 490px;
+}
+
+.repeated-content-heading {
+  font-family: var(--text-font-family);
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 120%;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.repeated-content-text {
+  font-family: var(--text-font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #777777;
+  margin-bottom: 30px;
+  border-left: 3px solid #888888;
+  padding-left: 37px;
+}
+
+.repeated-content-btn {
+  width: 260px;
+  height: 51px;
+  background-color: var(--accent-color);
+  border: none;
+  padding: 12px 38px;
+  font-family: var(--text-font-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.repeated-content-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+.repeated-content-btn:active {
+  opacity: 0.6;
+}
+
+/* FEATURES */
+
+.features {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 140px;
+}
+
+.features-wrapper {
+  width: 280px;
+}
+
+.features-heading {
+  font-family: var(--text-font-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #222222;
+  margin-bottom: 30px;
+}
+
+.features-text {
+  font-family: var(--text-font-family);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #333333;
+}
+
+/* PROMO */
+
+.promo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  margin-bottom: 70px;
+}
+
+.promo-img {
+  width: 400px;
+  height: 600px;
+}
+
+/* SITE-FOOTER */
+.site-footer {
+  width: 100%;
+  max-width: 1250px;
+  height: 830px;
+  margin: 0 auto;
+  padding: 240px 125px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-image: url(/img/runners.jpg);
+}
+
+.footer-heading,
+.footer-text,
+.footer-btn {
+  color: #ffffff !important;
+}
+
+.footer-text {
+  border-left: 3px solid #ffffff;
+}
+
+/* RETINA-BACKGROUND-IMG */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(/img/intro-bg@2x.png);
+  }
+
+  .site-footer {
+    background-image: url(/img/runners@2x.jpg);
+  }
 }
