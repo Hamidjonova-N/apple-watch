@@ -229,6 +229,10 @@ a {
   width: 280px;
 }
 
+.features-wrapper:not(:last-child) {
+  margin-right: 80px;
+}
+
 .features-heading {
   font-family: var(--text-font-family);
   font-weight: 700;
@@ -245,6 +249,43 @@ a {
   font-size: 15px;
   line-height: 160%;
   color: #333333;
+  margin-bottom: 20px;
+}
+
+.features-divider {
+  width: 8px;
+  height: 8px;
+  border: none;
+  background-color: #dddddd;
+  box-shadow: 16px 0 0 0 #dddddd, 32px 0 0 0 #dddddd;
+}
+
+.features-link {
+  font-family: var(--text-font-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  display: inline-flex;
+  align-items: center;
+}
+
+.features-link::before {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background-color: var(--accent-color);
+  margin-right: 10px;
+  transition: width 0.3s ease;
+}
+
+.features-link:hover::before {
+  width: 60px;
+}
+
+.features-link:active {
+  opacity: 0.6;
 }
 
 /* PROMO */
