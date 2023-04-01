@@ -153,8 +153,6 @@ a {
 /* HERO */
 
 .hero {
-  /* height: 100vh; */
-  /* max-height: 567px; */
   width: 100%;
   border-bottom: 2px solid #dddddd;
   background-image: url(/img/intro-bg.png);
@@ -192,7 +190,7 @@ a {
 }
 
 .repeated-content-btn {
-  width: 260px;
+  min-width: 260px;
   height: 51px;
   background-color: var(--accent-color);
   border: none;
@@ -302,19 +300,23 @@ a {
 .promo-img {
   width: 400px;
   height: 600px;
+  object-fit: cover;
 }
 
 /* SITE-FOOTER */
 .site-footer {
   width: 100%;
-  max-width: 1250px;
   height: 830px;
-  margin: 0 auto;
   padding: 240px 125px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
   background-image: url(/img/runners.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.footer-content-wrapper {
+  margin-left: auto;
 }
 
 .footer-heading,
